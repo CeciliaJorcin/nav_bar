@@ -421,6 +421,17 @@ video {
   display: none;
 }
 
+p,
+  h1,
+  h2,
+  h3 {
+  text-align: center;
+  font-family: Montserrat-Regular;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -599,70 +610,6 @@ video {
 
   src: url("./fonts/Montserrat-Regular.woff2") format("woff2"),
     url("./fonts/Montserrat-Regular.woff") format("woff");
-}
-
-:root {
-  --font-montserrat: "Montserrat-Regular";
-  --nav-bar-min-height: 60px;
-  --nav-bar-max-height: 130px;
-  --main-color: rgba(65, 164, 55);
-  --darker-color: rgba(55, 144, 35);
-  --main-color-shadow: rgba(65, 164, 55, 0.8);
-  --main-color-transparency: rgba(65, 164, 55, 0.5);
-  --main-color-1: rgba(65, 164, 55, 0.15);
-  --main-color-3: rgba(65, 164, 55, 0.3);
-}
-
-@layer "tailwindcss/base" {
-  p,
-  h1,
-  h2,
-  h3 {
-    font-family: Montserrat-Regular;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    text-transform: none;
-  }
-
-  @media (min-width: 768px) {
-    p,
-  h1,
-  h2,
-  h3 {
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    p,
-  h1,
-  h2,
-  h3 {
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    p,
-  h1,
-  h2,
-  h3 {
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    p,
-  h1,
-  h2,
-  h3 {
-      font-size: 1.875rem;
-      line-height: 2.25rem;
-    }
-  }
 }
 
 @media (min-width: 1280px) {

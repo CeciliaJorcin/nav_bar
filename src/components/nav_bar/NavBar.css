@@ -1,3 +1,13 @@
+:root {
+  --font-montserrat: "Montserrat-Regular";
+  --nav-bar-min-height: 60px; /* adjust according to "finalHeight" value on ./config.js */
+  --nav-bar-max-height: 130px; /* adjust according to "initialHeight" value on ./config.js */
+  --nav-bar-min-mobile-height: 40px; /* adjust according to "smallScreenHeight" value on ./config.js */
+  --nav-bar-max-mobile-height: 60px; /* adjust according to "smallScreenHeight" value on ./config.js */
+  --main-color: rgb(126, 66, 131);
+  --transparency: rgba(255, 255, 255, 0.8);
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -46,31 +56,19 @@
 }
 
 .hamburger {
-  border: 0;
-  height: 40px;
-  width: 40px;
-  padding: 0.5rem;
+  height: 30px;
+  width: 30px;
+  padding: 0.25rem;
   border-radius: 50%;
   background-color: var(--main-color);
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
   position: absolute;
-  top: 50%;
   right: 25px;
-  transform: translateY(-50%);
   display: none;
 }
 
-.hamburger:hover {
-  background-color: var(--main-color);
-}
-
-@media screen and (max-width: 550px) {
-  .navigation {
-    height: 50px !important;
-    background-color: transparent;
-  }
-
+/* styles for mobile */
+@media screen and (max-width: 768px) {
   .hamburger {
     display: block;
   }
@@ -80,22 +78,18 @@
     padding-left: 20px;
   }
 
-  .logo img {
-    transition: none;
-  }
-
   .navigation-menu ul {
     flex-direction: column;
     display: flex;
     align-items: center;
     position: absolute;
-    top: 50px;
+    top: 100%;
     right: 0;
     padding-left: 30px;
     padding-right: 30px;
     width: max-content;
-    height: max-content; /*height: calc(100vh - 55px);*/
-    background-color: rgba(255, 255, 255, 0.9);
+    height: max-content;
+    background-color: var(--transparency);
     display: none;
   }
 
@@ -112,18 +106,7 @@
     padding: 0.5rem 0;
   }
 
-  .navigation-menu li:hover {
-    background-color: #eee;
-  }
-
   .navigation-menu.expanded ul {
     display: block;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .navigation-menu li {
-    font-size: 16px;
-    font-weight: 600;
   }
 }

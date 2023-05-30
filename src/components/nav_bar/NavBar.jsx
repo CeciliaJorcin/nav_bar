@@ -1,59 +1,55 @@
 import React, { useState, useEffect } from "react";
-import imgLogo from "../../images/logo-slogan.png";
-import imgLogoSinSlogan from "../../images/logo-sin-slogan.png";
 import "./NavBar.css";
-
-/*
-menuItems: contains the items to display in the menu
-name: value to be shown in menu
-value: href value for link
-*/
-const menuItems = [
-  { name: "About us", value: "about" },
-  { name: "Our Product", value: "product" },
-  { name: "Our Clients", value: "clients" },
-  { name: "Contact", value: "contact" },
-];
+import {
+  menuItems,
+  navBarInitialHeight,
+  navBarFinalHeight,
+  navBarInitialMobileHeight,
+  navBarFinalMobileHeight,
+  transparency,
+  imgLogo,
+  imgLogoSinSlogan,
+  backdropFilter,
+} from "./config";
 
 const NavBar = () => {
-  const initialHeight = 130;
-  const finalHeight = 60;
-  const transparent = "rgba(255, 255, 255, 0.8)";
-  const [navbarStyle, setNavbarStyle] = useState({
-    height: window.innerWidth <= 768 ? finalHeight : initialHeight,
-    backgroundColor: window.innerWidth <= 768 ? transparent : "transparent",
-    backdropFilter: window.innerWidth <= 768 ? "blur(4px)" : "none",
-  });
-  const [logoImage, setLogoImage] = useState(
-    window.innerWidth <= 768 ? imgLogoSinSlogan : imgLogo
-  );
+  const initialHeight =
+    window.innerWidth <= 768 ? navBarInitialMobileHeight : navBarInitialHeight;
+  const finalHeight =
+    window.innerWidth <= 768 ? navBarFinalMobileHeight : navBarFinalHeight;
+
+  const initialStyles = {
+    height: initialHeight,
+    backgroundColor: window.innerWidth <= 768 ? transparency : "transparent",
+    backdropFilter: window.innerWidth <= 768 ? backdropFilter : "none",
+  };
+
+  const [navbarStyle, setNavbarStyle] = useState(initialStyles);
+  const initialLogoImage =
+    window.innerWidth <= 768 ? imgLogoSinSlogan : imgLogo;
+  const [logoImage, setLogoImage] = useState(initialLogoImage);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        setNavbarStyle({
+          height: finalHeight,
+          backgroundColor: transparency,
+          backdropFilter: backdropFilter,
+        });
+        setLogoImage(imgLogoSinSlogan);
+      } else {
+        setNavbarStyle(initialStyles);
+        setLogoImage(initialLogoImage);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
-  const handleScroll = () => {
-    if (window.pageYOffset > 0) {
-      setNavbarStyle({
-        height: finalHeight,
-        backgroundColor: transparent,
-        backdropFilter: "blur(4px)",
-      });
-
-      setLogoImage(imgLogoSinSlogan);
-    } else {
-      setNavbarStyle({
-        height: window.innerWidth <= 768 ? finalHeight : initialHeight,
-        backgroundColor: window.innerWidth <= 768 ? transparent : "transparent",
-        backdropFilter: "none",
-      });
-      setLogoImage(window.innerWidth <= 768 ? imgLogoSinSlogan : imgLogo);
-    }
-  };
+  });
 
   return (
     <nav style={navbarStyle} className="navigation">
@@ -66,7 +62,6 @@ const NavBar = () => {
           setIsNavExpanded(!isNavExpanded);
         }}
       >
-        {/* icon from heroicons.com */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -80,11 +75,7 @@ const NavBar = () => {
           />
         </svg>
       </button>
-      <div
-        className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
-        }
-      >
+      <div className={`navigation-menu ${isNavExpanded && "expanded"}`}>
         <ul>
           {menuItems.map((item, index) => (
             <li key={index}>

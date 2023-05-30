@@ -3,15 +3,8 @@
 }
 
 .section-top {
-  background-image: url("./images/img2.jpg");
+  background-image: url("./images/img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: var(--nav-bar-max-height);
 }
-/*
-h1 {
-  text-align: center;
-  font-family: var(--font-montserrat);
-  size: ;
-}
-*/
