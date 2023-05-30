@@ -16,12 +16,12 @@ It uses React hooks (useState and useEffect) to manage state and handle scroll e
 
 1. Clone the repository:
 ```shell
-git clone https://github.com/your-username/react-navigation-bar.git
+git clone https://github.com/CeciliaJorcin/nav_bar.git
 ```
 
 2. Navigate to the project directory:
 ```shell
-cd react-navigation-bar
+cd nav-bar
 ```
 
 3. Install the dependencies:
