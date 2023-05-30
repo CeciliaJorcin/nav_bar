@@ -6,14 +6,6 @@ The navigation bar includes a **logo** and a customizable list of **menu items**
 
 It uses React hooks (useState and useEffect) to manage state and handle scroll events. It uses a configuration file **(./config.js)** that contains constants and values used for styling and configuration purposes.
 
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ### Features
 
 - **Responsive design**: The navigation bar adapts its layout and style based on different screen sizes.
