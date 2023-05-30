@@ -1,10 +1,10 @@
 # React Navigation Bar Component
 
-This project creates a responsive navigation bar component that adjusts its appearance and behavior based on the screen size and scroll events.
+This project creates a **responsive navigation bar** component that adjusts its appearance and behavior based on the screen size and scroll events.
 
-The navigation bar includes a logo and a list of menu items (or hamburger button for toggling the navigation menu on mobile). The navigation bar's style and behavior are responsive, adapting to different screen sizes and scroll events.
+The navigation bar includes a **logo** and a customizable list of **menu items** (or hamburger button for toggling the navigation menu on mobile). The navigation bar's style and behavior are responsive, adapting to different screen sizes and scroll events.
 
-It uses React hooks (useState and useEffect) to manage state and handle scroll events. It uses a configuration file (./config.js) that contains constants and values used for styling and configuration purposes.
+It uses React hooks (useState and useEffect) to manage state and handle scroll events. It uses a configuration file **(./config.js)** that contains constants and values used for styling and configuration purposes.
 
 ## Table of Contents
 
@@ -16,9 +16,9 @@ It uses React hooks (useState and useEffect) to manage state and handle scroll e
 
 ### Features
 
-- Responsive design: The navigation bar adapts its layout and style based on different screen sizes.
-- Scroll behavior: The navigation bar adjusts its appearance based on the scroll position of the page.
-- Configurable options: The component provides configuration options for customizing the initial height, final height, transparency, logo images, backdrop filter, and menu items.
+- **Responsive design**: The navigation bar adapts its layout and style based on different screen sizes.
+- **Scroll behavior**: The navigation bar adjusts its appearance based on the scroll position of the page.
+- **Configurable options**: The component provides configuration options for customizing the initial height, final height, transparency, logo images, backdrop filter, and menu items.
 
 ### Installation
 
@@ -74,7 +74,7 @@ function App() {
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
 ### License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License.
 
 ### Acknowledgements
 This project was created using React and Tailwind CSS.
