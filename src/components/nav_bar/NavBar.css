@@ -1,0 +1,129 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #fff;
+  color: black;
+  transition: height 0.3s, background-color 0.3s;
+  z-index: 999;
+}
+
+.navigation-menu {
+  margin-left: auto;
+}
+
+.navigation-menu ul {
+  display: flex;
+  padding: 0px;
+}
+
+.navigation-menu li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.logo {
+  height: 100%;
+  padding-top: 5px;
+  padding-left: 40px;
+}
+
+.logo img {
+  max-height: 100%;
+  transition: width 0.3s, height 0.3s;
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.hamburger:hover {
+  background-color: var(--main-color);
+}
+
+@media screen and (max-width: 550px) {
+  .navigation {
+    height: 50px !important;
+    background-color: transparent;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    padding-top: 0px;
+    padding-left: 20px;
+  }
+
+  .logo img {
+    transition: none;
+  }
+
+  .navigation-menu ul {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: max-content;
+    height: max-content; /*height: calc(100vh - 55px);*/
+    background-color: rgba(255, 255, 255, 0.9);
+    display: none;
+  }
+
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .navigation-menu li a {
+    color: black;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .navigation-menu li:hover {
+    background-color: #eee;
+  }
+
+  .navigation-menu.expanded ul {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-menu li {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
