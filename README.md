@@ -1,4 +1,4 @@
-### React Navigation Bar Component
+# React Navigation Bar Component
 
 This project creates a responsive navigation bar component that adjusts its appearance and behavior based on the screen size and scroll events.
 
@@ -14,49 +14,48 @@ It uses React hooks (useState and useEffect) to manage state and handle scroll e
 - [Contributing](#contributing)
 - [License](#license)
 
-# Features
+### Features
 
 - Responsive design: The navigation bar adapts its layout and style based on different screen sizes.
 - Scroll behavior: The navigation bar adjusts its appearance based on the scroll position of the page.
 - Configurable options: The component provides configuration options for customizing the initial height, final height, transparency, logo images, backdrop filter, and menu items.
 
-# Installation
+### Installation
 
 1. Clone the repository:
-<pre><code>```shell
+```shell
 git clone https://github.com/your-username/react-navigation-bar.git
-
-`````</code></pre>
+```
 
 2. Navigate to the project directory:
-<pre><code>```shell
+```shell
 cd react-navigation-bar
-```</code></pre>
+```
 
 3. Install the dependencies:
-<pre><code>```shell
+```shell
 npm install
-```</code></pre>
+```
 
 4. Start the development server:
-<pre><code>```shell
+```shell
 npm start
-```</code></pre>
+```
 
 The application will be available at http://localhost:3000.
 
 
-# Usage
+### Usage
 
 To use the navigation bar component in your React application, follow these steps:
 
 1. Import the **'NavBar'** component into your file:
-<pre><code>```jsx
+```jsx
 import NavBar from "./components/NavBar";
-````</code></pre>
+```
 
 2. Place the **'NavBar'** component within your component hierarchy:
-<pre><code>```jsx
+```jsx
 function App() {
   return (
     <div>
@@ -66,17 +65,17 @@ function App() {
     </div>
   );
 }
-```</code></pre>
+```
 
 3. Customize the configuration options in **'./components/config.js'** to match your desired styles and menu items.
 
 
-# Contributing
+### Contributing
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
-# License
+### License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-# Acknowledgements
+### Acknowledgements
 This project was created using React and Tailwind CSS.
 `````
