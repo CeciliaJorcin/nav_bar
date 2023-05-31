@@ -1,62 +1,53 @@
-### React Navigation Bar Component
+# React Navigation Bar Component
 
-This project creates a responsive navigation bar component that adjusts its appearance and behavior based on the screen size and scroll events.
+This project creates a **responsive navigation bar** component that adjusts its appearance and behavior based on the screen size and scroll events.
 
-The navigation bar includes a logo and a list of menu items (or hamburger button for toggling the navigation menu on mobile). The navigation bar's style and behavior are responsive, adapting to different screen sizes and scroll events.
+The navigation bar includes a **logo** and a customizable list of **menu items** (or hamburger button for toggling the navigation menu on mobile). The navigation bar's style and behavior are responsive, adapting to different screen sizes and scroll events.
 
-It uses React hooks (useState and useEffect) to manage state and handle scroll events. It uses a configuration file (./config.js) that contains constants and values used for styling and configuration purposes.
+It uses React hooks (useState and useEffect) to manage state and handle scroll events. It uses a configuration file **(./src/components/config.js)** that contains constants and values used for styling and configuration purposes.
 
-## Table of Contents
+### Features
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- **Responsive design**: The navigation bar adapts its layout and style based on different screen sizes.
+- **Scroll behavior**: The navigation bar adjusts its appearance based on the scroll position of the page.
+- **Configurable options**: The component provides configuration options for customizing the initial height, final height, transparency, logo images, backdrop filter, and menu items.
 
-# Features
-
-- Responsive design: The navigation bar adapts its layout and style based on different screen sizes.
-- Scroll behavior: The navigation bar adjusts its appearance based on the scroll position of the page.
-- Configurable options: The component provides configuration options for customizing the initial height, final height, transparency, logo images, backdrop filter, and menu items.
-
-# Installation
+### Installation
 
 1. Clone the repository:
-<pre><code>```shell
-git clone https://github.com/your-username/react-navigation-bar.git
-
-`````</code></pre>
+```shell
+git clone https://github.com/CeciliaJorcin/nav_bar.git
+```
 
 2. Navigate to the project directory:
-<pre><code>```shell
-cd react-navigation-bar
-```</code></pre>
+```shell
+cd nav-bar
+```
 
 3. Install the dependencies:
-<pre><code>```shell
+```shell
 npm install
-```</code></pre>
+```
 
 4. Start the development server:
-<pre><code>```shell
+```shell
 npm start
-```</code></pre>
+```
 
 The application will be available at http://localhost:3000.
 
 
-# Usage
+### Usage
 
 To use the navigation bar component in your React application, follow these steps:
 
 1. Import the **'NavBar'** component into your file:
-<pre><code>```jsx
+```jsx
 import NavBar from "./components/NavBar";
-````</code></pre>
+```
 
 2. Place the **'NavBar'** component within your component hierarchy:
-<pre><code>```jsx
+```jsx
 function App() {
   return (
     <div>
@@ -66,17 +57,19 @@ function App() {
     </div>
   );
 }
-```</code></pre>
+```
 
-3. Customize the configuration options in **'./components/config.js'** to match your desired styles and menu items.
+3. Customize the configuration options in **'./src/components/config.js'** and **'./src/components/nav_bar/NavBar.css'** to match your desired style, navigation bar size and colors.
+
+5. Customize **menuItems** in **'./src/components/config.js'** to add your own menu items.
 
 
-# Contributing
+### Contributing
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
-# License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+### License
+This project is licensed under the MIT License.
 
-# Acknowledgements
-This project was created using React and Tailwind CSS.
+### Acknowledgements
+This project was created using React, CSS and Tailwind CSS.
 `````
