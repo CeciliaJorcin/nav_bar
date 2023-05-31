@@ -4,7 +4,7 @@
   --nav-bar-max-height: 130px; /* adjust according to "initialHeight" value on ./config.js */
   --nav-bar-min-mobile-height: 40px; /* adjust according to "smallScreenHeight" value on ./config.js */
   --nav-bar-max-mobile-height: 60px; /* adjust according to "smallScreenHeight" value on ./config.js */
-  --main-color: rgb(126, 66, 131);
+  --main-color: rgb(102, 45, 145);
   --transparency: rgba(255, 255, 255, 0.8);
 }
 

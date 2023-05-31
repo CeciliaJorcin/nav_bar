@@ -13,7 +13,8 @@ export const menuItems = [
   { name: "Our Clients", value: "clients" },
   { name: "Contact", value: "contact" },
 ];
-export const mainColor = "rgb(126, 66, 131)";
+export const mainColor =
+  "rgb(102, 45, 145)"; /* same value in NavBar.css "--main-color" */
 /* Nav Bar Settings */
 export const navBarInitialHeight = 130; /* initial height on wide screens */
 export const navBarFinalHeight = 60; /* final height on scroll on wide screens */
