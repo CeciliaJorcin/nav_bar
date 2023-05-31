@@ -4,7 +4,7 @@ This project creates a **responsive navigation bar** component that adjusts its 
 
 The navigation bar includes a **logo** and a customizable list of **menu items** (or hamburger button for toggling the navigation menu on mobile). The navigation bar's style and behavior are responsive, adapting to different screen sizes and scroll events.
 
-It uses React hooks (useState and useEffect) to manage state and handle scroll events. It uses a configuration file **(./config.js)** that contains constants and values used for styling and configuration purposes.
+It uses React hooks (useState and useEffect) to manage state and handle scroll events. It uses a configuration file **(./src/components/config.js)** that contains constants and values used for styling and configuration purposes.
 
 ### Features
 
@@ -59,7 +59,9 @@ function App() {
 }
 ```
 
-3. Customize the configuration options in **'./components/config.js'** to match your desired styles and menu items.
+3. Customize the configuration options in **'./src/components/config.js'** and **'./src/components/nav_bar/NavBar.css'** to match your desired style, navigation bar size and colors.
+
+5. Customize **menuItems** in **'./src/components/config.js'** to add your own menu items.
 
 
 ### Contributing
@@ -69,5 +71,5 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 This project is licensed under the MIT License.
 
 ### Acknowledgements
-This project was created using React and Tailwind CSS.
+This project was created using React, CSS and Tailwind CSS.
 `````
